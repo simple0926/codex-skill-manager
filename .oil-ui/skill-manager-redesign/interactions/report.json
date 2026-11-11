@@ -1,0 +1,190 @@
+[
+  {
+    "file": "motion-更新预览-end.jpg",
+    "state": null,
+    "size": "1440x1024",
+    "zoom": 1,
+    "group": "更新预览",
+    "issues": [],
+    "frames": {
+      "start": {
+        "file": "motion-更新预览-start.jpg",
+        "source": "Page.captureScreenshot",
+        "timeMs": 805
+      },
+      "mid": {
+        "file": "motion-更新预览-mid.jpg",
+        "source": "Page.screencastFrame",
+        "timeMs": 917
+      },
+      "end": {
+        "file": "motion-更新预览-end.jpg",
+        "source": "Page.captureScreenshot",
+        "timeMs": 2872
+      }
+    },
+    "sampling": {
+      "mode": "action",
+      "step": 2,
+      "action": "click",
+      "raw": "click #skillRows tr:first-child button[data-action=update]"
+    },
+    "durationMs": 2872,
+    "sequence": {
+      "file": "motion-更新预览-sequence.png",
+      "width": 2656,
+      "height": 1038,
+      "columns": 4,
+      "items": [
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 24,
+          "y": 24,
+          "label": "0.000 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 680,
+          "y": 24,
+          "label": "0.574 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 1336,
+          "y": 24,
+          "label": "1.149 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 1992,
+          "y": 24,
+          "label": "1.723 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 24,
+          "y": 527,
+          "label": "2.298 s",
+          "labelY": 990
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 680,
+          "y": 527,
+          "label": "2.872 s",
+          "labelY": 990
+        }
+      ],
+      "frames": [
+        {
+          "timeMs": 0,
+          "sourceTimeMs": 0
+        },
+        {
+          "timeMs": 574,
+          "sourceTimeMs": 567
+        },
+        {
+          "timeMs": 1149,
+          "sourceTimeMs": 1033
+        },
+        {
+          "timeMs": 1723,
+          "sourceTimeMs": 1617
+        },
+        {
+          "timeMs": 2298,
+          "sourceTimeMs": 2133
+        },
+        {
+          "timeMs": 2872,
+          "sourceTimeMs": 2872
+        }
+      ]
+    },
+    "consistency": {
+      "status": "matched",
+      "reference": "motion-更新预览-end.jpg",
+      "different": false,
+      "changedPixels": 0,
+      "maxTilePixels": 0,
+      "pixelRatio": 0
+    }
+  }
+]
