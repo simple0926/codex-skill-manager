@@ -1,0 +1,13 @@
+[
+  {
+    "file": "motion-查看详情-end.jpg",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "group": "查看详情",
+    "failed": true,
+    "issues": [
+      "第 1 步「click #skillRows tr:first-child」：找不到元素 #skillRows tr:first-child；线索：去掉最后一段后 \"#skillRows\" 匹配 1 个元素；例如 click .open"
+    ]
+  }
+]
