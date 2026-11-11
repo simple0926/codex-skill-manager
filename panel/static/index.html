@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Codex Skills · 本地维护</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#skillTable">跳到技能列表</a>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#skillTable" aria-label="Codex Skills 本地维护首页">
+          <span class="brand-mark"><img src="/icons/logo.svg" alt="" /></span>
+          <span class="brand-copy"><strong>Codex Skills</strong><small>LOCAL MAINTENANCE</small></span>
+        </a>
+        <label class="command-search">
+          <img src="/icons/search.svg" alt="" />
+          <span class="sr-only">搜索 Skills</span>
+          <input id="globalSearch" type="search" placeholder="搜索名称、描述或仓库…" autocomplete="off" />
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="topbar-actions">
+          <span class="scope-note">只显示可更新或可安全卸载的 Skills</span>
+          <button class="button primary" id="refreshButton" type="button"><img src="/icons/arrows-clockwise.svg" alt="" />重新扫描</button>
+        </div>
+      </header>
+
+      <nav class="status-tabs" id="statusTabs" aria-label="Skill 操作视图">
+        <button class="status-tab active" type="button" data-view="all" aria-current="page">全部可管理 <span id="allCount">—</span></button>
+        <button class="status-tab" type="button" data-view="update">可更新 <span id="updateCount">—</span></button>
+        <button class="status-tab" type="button" data-view="attention">仅可卸载 <span id="attentionCount">—</span></button>
+        <button class="status-tab" type="button" data-view="unused">90 天未用 <span id="unusedCount">—</span></button>
+        <div class="tab-spacer"></div>
+        <button class="trash-link" id="trashButton" type="button"><img src="/icons/trash.svg" alt="" />回收站 <span id="trashCount">0</span></button>
+      </nav>
+
+      <main class="workspace" id="installedView">
+        <section class="table-pane" aria-labelledby="inventoryTitle">
+          <h1 class="sr-only" id="inventoryTitle">本机可管理 Skills 清单</h1>
+          <div class="filter-toolbar" aria-label="筛选和排序">
+            <div class="inventory-label"><span>INVENTORY</span><strong>本机 Skills</strong></div>
+            <label class="compact-field"><span>分类</span><select id="categoryFilter"><option value="">全部</option></select></label>
+            <label class="compact-field"><span>使用</span><select id="usageFilter"><option value="">全部</option><option value="active30">近 30 天</option><option value="active90">近 90 天</option><option value="unused">90 天未用</option></select></label>
+            <label class="compact-field"><span>动作</span><select id="healthFilter"><option value="">全部</option><option value="update">可更新</option><option value="attention">仅可卸载</option></select></label>
+            <div class="toolbar-spacer"></div>
+            <button class="button subtle" id="starsButton" type="button">刷新 Stars</button>
+            <label class="icon-select" title="排序方式"><img src="/icons/funnel.svg" alt="" /><select id="sortSelect" aria-label="排序方式"><option value="name">名称排序</option><option value="usage">使用频率</option><option value="recent">最近使用</option><option value="stars">Stars</option></select></label>
+          </div>
+          <div class="table-scroll" id="skillTable" tabindex="-1">
+            <table>
+              <thead><tr><th class="name-column">Skill</th><th>分类</th><th>Stars</th><th>显式使用</th><th>维护方式</th><th class="actions-column">下一步</th></tr></thead>
+              <tbody id="skillRows"></tbody>
+            </table>
+            <div id="emptyState" class="empty-state" hidden><img src="/icons/package.svg" alt="" /><strong>没有匹配的 Skill</strong><span>调整搜索词或筛选条件后重试。</span><button class="button subtle" id="clearFilters" type="button">清除筛选</button></div>
+          </div>
+          <footer class="table-statusbar"><span id="resultCount" aria-live="polite">正在读取…</span><span class="keyboard-hints"><kbd>↑↓</kbd> 选择 <kbd>Enter</kbd> 详情 <kbd>U</kbd> 更新</span></footer>
+        </section>
+        <aside class="detail-inspector" id="detailInspector" aria-labelledby="inspectorTitle">
+          <header class="inspector-header"><div><span>SELECTED SKILL</span><h2 id="inspectorTitle">维护详情</h2></div><button class="icon-button inspector-close" id="inspectorClose" type="button" aria-label="关闭详情"><img src="/icons/close.svg" alt="" /></button></header>
+          <div class="inspector-content" id="inspectorContent"><div class="inspector-empty"><img src="/icons/package.svg" alt="" /><strong>选择一个 Skill</strong><span>查看使用情况和可执行的维护动作。</span></div></div>
+        </aside>
+      </main>
+    </div>
+
+    <div class="scrim" id="trashScrim" hidden></div>
+    <aside class="drawer" id="trashDrawer" aria-labelledby="trashTitle" aria-hidden="true"><div class="drawer-header"><div><p class="section-kicker">RECOVERY</p><h2 id="trashTitle">Skill 回收站</h2></div><button class="icon-button" data-close="trash" aria-label="关闭"><img src="/icons/close.svg" alt="" /></button></div><div id="trashContent" class="drawer-content"></div></aside>
+    <div class="modal-backdrop" id="actionModal" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header"><div><p class="section-kicker" id="modalKicker">ACTION PREVIEW</p><h2 id="modalTitle">操作预览</h2></div><button class="icon-button" id="modalClose" aria-label="关闭"><img src="/icons/close.svg" alt="" /></button></div>
+        <div class="modal-body"><div id="modalStatus" class="callout">正在生成预览…</div><pre id="planOutput" hidden></pre><label id="confirmationField" class="confirmation-field" hidden><span>输入确认短语：<code id="confirmationPhrase"></code></span><input id="confirmationInput" autocomplete="off" spellcheck="false" /></label></div>
+        <div class="modal-actions"><button class="button subtle" id="modalCancel" type="button">取消</button><button class="button danger" id="applyButton" type="button" disabled>确认执行</button></div>
+      </section>
+    </div>
+    <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
