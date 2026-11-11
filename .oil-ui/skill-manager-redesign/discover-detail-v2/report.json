@@ -1,0 +1,167 @@
+[
+  {
+    "file": "motion-查看并预览-Skill-end.jpg",
+    "state": null,
+    "size": "1440x1024",
+    "zoom": 1,
+    "group": "查看并预览 Skill",
+    "issues": [],
+    "frames": {
+      "start": {
+        "file": "motion-查看并预览-Skill-start.jpg",
+        "source": "Page.captureScreenshot",
+        "timeMs": 8239
+      },
+      "mid": {
+        "file": "motion-查看并预览-Skill-mid.jpg",
+        "source": "Page.screencastFrame",
+        "timeMs": 9066
+      },
+      "end": {
+        "file": "motion-查看并预览-Skill-end.jpg",
+        "source": "Page.captureScreenshot",
+        "timeMs": 11371
+      }
+    },
+    "sampling": {
+      "mode": "action",
+      "step": 6,
+      "action": "click",
+      "raw": "click .remote-skill-item"
+    },
+    "durationMs": 11371,
+    "sequence": {
+      "file": "motion-查看并预览-Skill-sequence.png",
+      "width": 2656,
+      "height": 1038,
+      "columns": 4,
+      "items": [
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 24,
+          "y": 24,
+          "label": "0.000 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 680,
+          "y": 24,
+          "label": "2.843 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 1336,
+          "y": 24,
+          "label": "5.685 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 1992,
+          "y": 24,
+          "label": "8.528 s",
+          "labelY": 487
+        },
+        {
+          "naturalWidth": 1440,
+          "naturalHeight": 1024,
+          "scale": 1,
+          "renderScale": 0.4444444444444444,
+          "sourceCrop": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1024
+          },
+          "width": 640,
+          "height": 455,
+          "labelHeight": 32,
+          "x": 24,
+          "y": 527,
+          "label": "11.371 s",
+          "labelY": 990
+        }
+      ],
+      "frames": [
+        {
+          "timeMs": 0,
+          "sourceTimeMs": 0
+        },
+        {
+          "timeMs": 2843,
+          "sourceTimeMs": 2600
+        },
+        {
+          "timeMs": 5685,
+          "sourceTimeMs": 5566
+        },
+        {
+          "timeMs": 8528,
+          "sourceTimeMs": 8216
+        },
+        {
+          "timeMs": 11371,
+          "sourceTimeMs": 11371
+        }
+      ]
+    },
+    "consistency": {
+      "status": "matched",
+      "reference": "motion-查看并预览-Skill-end.jpg",
+      "different": false,
+      "changedPixels": 0,
+      "maxTilePixels": 0,
+      "pixelRatio": 0
+    }
+  }
+]
