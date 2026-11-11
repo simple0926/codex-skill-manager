@@ -1,0 +1,42 @@
+[
+  {
+    "file": "page-1440x1024.png",
+    "state": null,
+    "size": "1440x1024",
+    "zoom": 1,
+    "animationWaitMs": 922,
+    "issues": [],
+    "lint": [
+      {
+        "rule": "contrastLow",
+        "label": "文字对比度不达标（正文低于 3:1，大字低于 2.5:1）",
+        "count": 2,
+        "examples": [
+          "span.stars.unknown「未获取」（2.96:1）",
+          "span.version.unknown「未获取」（2.96:1）"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "page-1024x768.png",
+    "state": null,
+    "size": "1024x768",
+    "zoom": 1,
+    "failed": true,
+    "issues": [
+      "第 2 步「click #skillRows tr:first-child button[data-action=detail]」：找不到元素 #skillRows tr:first-child button[data-action=detail]；线索：页面没有属性 data-action；例如 click .open"
+    ]
+  },
+  {
+    "file": "page-390x844.png",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "animationWaitMs": 332,
+    "issues": [
+      "第 2 步「click #skillRows tr:first-child button[data-action=detail]」：中心点被 section.detail-hero:nth-of-type(1) 挡住，动作仍照常执行"
+    ],
+    "lint": []
+  }
+]
