@@ -1,0 +1,15 @@
+[
+  {
+    "file": "motion-查看并预览-Skill-end.jpg",
+    "state": null,
+    "size": "1440x1024",
+    "zoom": 1,
+    "group": "查看并预览 Skill",
+    "failed": true,
+    "issues": [
+      "加载错误：Failed to load resource: net::ERR_CONNECTION_RESET http://127.0.0.1:8765/icons/trash.svg",
+      "加载错误：Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:8765/api/discover?q=&sort=stars",
+      "第 1 步「waitfor .repository-card」：找不到元素 .repository-card；线索：去掉最后一段后 \"（空）\" 匹配 0 个元素；例如 waitfor .open"
+    ]
+  }
+]
