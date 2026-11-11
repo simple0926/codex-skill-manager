@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Skill Manager"
+  short_description: "盘点、分析、更新和安全卸载本地 Codex Skills"
+  default_prompt: "使用 $codex-skill-manager 盘点本机 Skills，并显示分类、Stars、使用频率与更新状态。"
