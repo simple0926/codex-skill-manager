@@ -1,0 +1,28 @@
+[
+  {
+    "file": "page-1440x1024.png",
+    "state": null,
+    "size": "1440x1024",
+    "zoom": 1,
+    "animationWaitMs": 63,
+    "issues": [
+      "加载错误：Failed to load resource: net::ERR_CONNECTION_RESET http://127.0.0.1:8765/icons/star.svg",
+      "加载错误：Failed to load resource: net::ERR_CONNECTION_RESET http://127.0.0.1:8765/icons/info.svg",
+      "加载错误：Failed to load resource: net::ERR_CONNECTION_RESET http://127.0.0.1:8765/api/inventory?refresh_stars=missing",
+      "图片没加载出来：/icons/star.svg",
+      "图片没加载出来：/icons/info.svg"
+    ],
+    "lint": []
+  },
+  {
+    "file": "page-375x812.png",
+    "state": null,
+    "size": "375x812",
+    "zoom": 1,
+    "animationWaitMs": 28,
+    "issues": [
+      "加载错误：Failed to load resource: net::ERR_CONNECTION_RESET http://127.0.0.1:8765/icons/info.svg"
+    ],
+    "lint": []
+  }
+]
